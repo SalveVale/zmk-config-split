@@ -1,0 +1,13 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob/zmk
+  projects:
+    - name: zmk
+      remote: urob
+      revision: mouse-keys
+      import: app/west.yml
+  self:
+    path: config

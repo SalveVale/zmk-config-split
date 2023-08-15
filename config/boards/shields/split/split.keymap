@@ -1,0 +1,39 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEFAULT	0
+#define WORK	1
+// #define WORK2	2
+// #define LABL	3
+// #define GAME	4
+// #define GAMEM	5
+// #define MIRR	6
+// #define NAV		7
+// #define NUM		8
+
+/ {
+	keymap {
+		compatible = "zmk,keymap";
+
+		DEFAULT {
+			bindings = <
+				&kp KP_ESC  	&kp KP_N1		&kp KP_N2		&kp KP_N3	&kp KP_N4	&kp KP_N5
+				&kp KP_TAB	    &kp KP_Q		&kp KP_W		&kp KP_F	&kp KP_P	&kp KP_B
+				&mo NAV			&kp KP_A		&kp KP_S		&kp KP_R	&kp KP_T	&kp KP_G
+				&kp KP_LSHIFT	&kp KP_Z		&kp KP_X		&kp KP_C	&kp KP_D	&kp KP_V		&none
+				&kp KP_LCTRL	&kp KP_GRAVE	&kp KP_LG(KP_S)	&kp KP_LGUI	&kp KP_LALT	&kp KP_SPACE	&mo NUM
+			>;
+		};
+
+		WORK {
+			bindings = <
+				&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_
+				&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_
+				&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_
+				&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_
+				&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_		&kp KP_
+			>;
+		};
+	};
+};
