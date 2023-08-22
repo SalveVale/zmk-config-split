@@ -5,13 +5,13 @@
 
 #define DEF 	0
 #define WORK	1
-// #define WORK2	2
-// #define LABL	3
-// #define GAME	4
-// #define GAMEM	5
-// #define MIRR	6
-// #define NAV		7
-// #define NUM		8
+#define WORK2	2
+#define LABL	3
+#define GAME	4
+#define GAMEM	5
+#define MIRR	6
+#define NUM		7
+#define FUNC	8
 
 / {
 	keymap {
@@ -19,21 +19,91 @@
 
 		DEF {
 			bindings = <
-				&kp ESC  	&kp N1		&kp N2		&kp N3		&kp N4		&kp N5
-				&kp TAB	    &kp Q		&kp W		&kp F		&kp P		&kp B
-				&mo NAV		&kp A		&kp S		&kp R		&kp T		&kp G
-				&kp LSHIFT	&kp Z		&kp X		&kp C		&kp D		&kp V		&none
-				&kp LCTRL	&kp GRAVE	&kp LG(S)	&kp LGUI	&kp LALT	&kp SPACE	&to NUM
+				&kp ESC  	&kp N1		&kp N2		&kp N3		&kp N4		&kp N5							&kp N6		&kp N7		&kp N8		&kp N9		&kp N0		&kp MINUS
+				&kp TAB	    &kp Q		&kp W		&kp F		&kp P		&kp B							&kp J		&kp L		&kp U		&kp Y		&kp APOS	&kp EQUAL
+				&mo NUM		&kp A		&kp S		&kp R		&kp T		&kp G							&kp M		&kp N		&kp E		&kp I		&kp O		&kp SEMICOLON
+				&kp LSHIFT	&kp Z		&kp X		&kp C		&kp D		&kp V		&none		&none	&kc K		&kp H		&kp COMMA	&kp PERIOD	&kp UP		&kp SLASH
+				&kp LCTRL	&kp GRAVE	&kp LG(S)	&kp LGUI	&kp LALT	&kp SPACE	&mo FUNC 	&none	&kp LSHIFT	&kp BSPC	&kp DEL		&kp LEFT	&kp DOWN	&kp RIGHT
 			>;
 		};
 
 		WORK {
 			bindings = <
-				&kp ESC		&kp N1	    &kp N2	    &kp N3		&kp M		&kp Y
-				&kp TAB		&kp Q 		&kp W		&kp D		&kp R		&kp T
-				&none		&kp LS(T)	&kp S    	&kp E 		&kp F		&kp G
-				&none 		&kp LC(Z)	&kp X		&kp C		&kp V		&kp LS(A)	&kp 
-				&kp DEL		&kp Z 		&kp LG(S)	&kp LGUI	&kp LALT	&mkp MCLK	&to DEF
+				&kp ESC		&kp N1	    &kp N2	    &kp N3		&kp M		&kp Y							&none	&none	&none	&none	&none	&none
+				&kp TAB		&kp Q 		&kp W		&kp D		&kp R		&kp T							&none	&none	&none	&none	&none	&none
+				&mo WORK2	&kp LS(T)	&kp S    	&kp E 		&kp F		&kp G							&none	&none	&none	&none	&none	&none
+				&none 		&kp LC(Z)	&kp X		&kp C		&kp V		&kp LS(A)	&none		&none	&none	&none	&none	&none	&none	&none
+				&kp DEL		&kp Z 		&kp LG(S)	&kp LGUI	&kp LALT	&mkp MCLK	&mo FUNC	&none	&none	&none	&none	&none	&none	&none
+			>;
+		};
+
+		WORK2 {
+			bindings = <
+				&kp ESC		&kp N1	    &kp N2	    &kp N3		&kp M		&kp Y							&none	&none	&none	&none	&none	&none
+				&to LABL	&kp Q 		&kp W		&kp D		&kp R		&kp T							&none	&none	&none	&none	&none	&none
+				&none		&kp LS(T)	&kp J    	&kp E 		&kp L		&kp P							&none	&none	&none	&none	&none	&none
+				&kp F11		&kp LC(Z)	&kp X		&kp C		&kp B		&kp M		&none		&none	&none	&none	&none	&none	&none	&none
+				&kp DEL		&kp Z 		&kp LG(S)	&kp LGUI	&kp DEL		&none		&mo FUNC	&none	&none	&none	&none	&none	&none	&none
+			>;
+		};
+
+		LABL {
+			bindings = <
+				&kp ESC		&none	    &kp E	    &kp T		&kp R		&none							&none	&none	&none	&none	&none	&none
+				&none		&kp V 		&none		&kp D		&none		&none							&none	&none	&none	&none	&none	&none
+				&none		&none		&kp A    	&kp D 		&kp F		&none							&none	&none	&none	&none	&none	&none
+				&kp F11		&kp LC(Z)	&kp E		&none		&kp R		&none		&none		&none	&none	&none	&none	&none	&none	&none
+				&none		&none 		&kp LG(S)	&kp LS(X)	&kp X		&none		&mo FUNC	&none	&none	&none	&none	&none	&none	&none
+			>;
+		};
+
+		GAME {
+			bindings = <
+				&kp N5		&kp ESC	    &kp N1	    &kp N2		&kp N3		&kp N4							&kp N6		&kp N7		&kp N8		&kp N9		&kp N10			&kp F11
+				&kp T		&kp TAB		&kp Q		&kp W		&kp E		&kp R							&kp Y		&kp I		&kp U		&kp P		&kp APOS		&kp F12
+				&kp G		&mo GAMEM	&kp A    	&kp S 		&kp D		&kp F							&kp H		&kp J		&kp K		&kp L		&kp SEMICOLON	&kp SEMICOLON
+				&kp B		&kp LSHIFT	&kp Z		&kp X		&kp C		&kp V		&none		&none	&kp M		&kp N		&kp COMMA	&kp PERIOD	&kp UP			&kp SLASH
+				&none		&kp LCTRL	&kp LG(S)	&kp LGUI	&kp LALT	&kp SPACE	&mo FUNC	&none	&kp ENTER	&kp BSPC	&kp DEL		&kp LEFT	&kp DOWN		&kp RIGHT
+			>;
+		};
+
+		GAMEM {
+			bindings = <
+				&kp F5		&kp ESC	    &kp F1	    &kp F2		&kp F3		&kp F4							&kp F6		&kp F7		&kp F8		&kp F9		&kp F10			&kp F11
+				&kp T		&kp TAB		&kp Y		&kp I		&kp U		&kp P							&kp Y		&kp I		&kp U		&kp P		&kp APOS		&kp F12
+				&kp G		&none		&kp H    	&kp J 		&kp K		&kp L							&kp H		&kp J		&kp K		&kp L		&kp SEMICOLON	&kp SEMICOLON
+				&kp B		&kp LSHIFT	&kp M		&kp N		&kp COMMA	&kp PERIOD	&none		&none	&kp M		&kp N		&kp COMMA	&kp PERIOD	&kp UP			&kp SLASH
+				&none		&kp LCTRL	&kp LG(S)	&kp LGUI	&kp LALT	&kp none	&mo FUNC	&none	&kp ENTER	&kp BSPC	&kp DEL		&kp LEFT	&kp DOWN		&kp RIGHT
+			>;
+		};
+
+		MIRR {
+			bindings = <
+				&kp ESC			&kp F6	    &kp F7	    &kp F8		&kp F9		&kp F10							&kp F6		&kp F7		&kp F8		&kp F9		&kp F10			&kp F11
+				&kp EQUAL		&kp J		&kp L		&kp U		&kp Y		&kp APOS						&kp Q		&kp W		&kp F		&kp P		&kp APOS		&kp F12
+				&kp SEMICOLON	&kp M		&kp N    	&kp E 		&kp I		&kp O							&kp A		&kp S		&kp R		&kp T		&kp SEMICOLON	&kp SEMICOLON
+				&kp SLASH		&kp K		&kp H		&kp COMMA	&kp PERIOD	&kp UP		&none		&none	&kp Z		&kp X		&kp C		&kp D		&kp UP			&kp SLASH
+				&kp LCTRL		&none		&kp LG(S)	&kp LGUI	&kp LALT	&kp SPACE	&mo FUNC	&none	&kp ENTER	&kp BSPC	&kp DEL		&kp LEFT	&kp DOWN		&kp RIGHT
+			>;
+		};
+
+		NUM {
+			bindings = <
+				&kp ESC		&kp F1	    	&kp F2	    &kp F3		&kp F4		&kp F5							&kp F6		&kp F7		&kp F8		&kp F9		&kp F10		&kp F11
+				&kp CAPS	&kp DIVIDE		&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_ASTERISK					&none		&kp LEFT	&kp PG_DN	&kp PG_UP	&kp RIGHT	&kp F12
+				&none		&kp HOME		&kp KP_N4  	&kp KP_N5	&kp KP_N6	&kp END							&none		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT	&none
+				&kp SLASH	&kp SUBTRACT	&kp KP_N1	&kp KP_N2	&kp KP_N3	&kp KP_PLUS	&none		&none	&kp Z		&kp X		&kp C		&kp D		&kp UP		&none
+				&kp LCTRL	&none			&to GAME	&to LABL	&kp KP_DOT	&kp KP_N0	&mo MIRR	&none	&kp ENTER	&kp BSPC	&kp DEL		&kp LEFT	&kp DOWN	&kp RIGHT
+			>;
+		};
+
+		FUNC {
+			bindings = <
+				&none		&none	    &none	    	&none		&none		&none							&none		&none		&none		&none		&none		&none
+				&none		&none	 	&none			&none		&none		&none							&none		&none		&none		&none		&none		&none
+				&none		&kp K_MUTE	&kp K_VOL_DN  	&kp K_VOL_U	&kp K_PREV	&kp K_NEXT						&none		&kp LEFT	&kp DOWN	&kp UP		&kp RIGHT	&none
+				&kp SLASH	&kp LEFT	&kp DOWN		&kp UP		&kp RIGHT	&none		&none	&none		&kp Z		&kp X		&kp C		&kp D		&kp UP		&none
+				&kp LCTRL	&none		&to GAME		&to LABL	&to WORK	&none		&none	&none		&kp ENTER	&kp BSPC	&kp DEL		&kp LEFT	&kp DOWN	&kp RIGHT
 			>;
 		};
 	};

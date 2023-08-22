@@ -1,6 +1,16 @@
-if SHIELD_SPLIT
+config ZMK_BLE
+	default y
+
+
+config ZMK_USB
+	default y
+
+if SHIELD_SPLIT || SHIELD_SPLIT_LEFT || SHIELD_SPLIT_RIGHT
 
 config ZMK_KEYBOARD_NAME
 	default "split"
 
 endif
+
+config ZMK_SPLIT
+	default y
