@@ -33,7 +33,7 @@
 				&kp TAB		&kp Q 		&kp W		&kp D		&kp R		&kp T							&none	&none	&none	&none	&none	&none
 				&mo WORK2	&kp LS(T)	&kp S    	&kp E 		&kp F		&kp G							&none	&none	&none	&none	&none	&none
 				&none 		&kp LC(Z)	&kp X		&kp C		&kp V		&kp LS(A)	&none		&none	&none	&none	&none	&none	&none	&none
-				&kp DEL		&kp Z 		&kp LG(S)	&kp LGUI	&kp LALT	&mkp MCLK	&mo FUNC	&none	&none	&none	&none	&none	&none	&none
+				&kp DEL		&kp Z 		&kp LG(S)	&kp LGUI	&kp LALT	&none		&mo FUNC	&none	&none	&none	&none	&none	&none	&none
 			>;
 		};
 
