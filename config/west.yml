@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: urob
-      revision: mouse-keys
+      revision: main
       import: app/west.yml
   self:
     path: config
